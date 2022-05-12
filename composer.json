@@ -1,0 +1,35 @@
+{
+  "name": "kilbourne/acorn-db",
+  "type": "package",
+  "license": "MIT",
+  "description": "Eloquent database support for Acorn projects",
+  "authors": [
+    {
+      "name": "Luca Castellone",
+      "email": "luca.castellone@gmail.com"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/Kilbourne/acorn-db/issues"
+  },
+  "autoload": {
+    "psr-4": {
+      "AcornDB\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=7.3",
+    "illuminate/database": "^8.70",
+    "illuminate/pagination": "^8.70",
+    "jgrossi/corcel": "^5.1"
+  },
+  "extra": {
+    "acorn": {
+      "providers": [
+        "Illuminate\\Pagination\\PaginationServiceProvider",
+        "Illuminate\\Database\\DatabaseServiceProvider",
+        "AcornDB\\Providers\\ConsoleSupportServiceProvider"
+      ]
+    }
+  }
+}
