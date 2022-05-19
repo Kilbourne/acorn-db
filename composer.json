@@ -30,6 +30,11 @@
         "Illuminate\\Database\\DatabaseServiceProvider",
         "AcornDB\\Providers\\ConsoleSupportServiceProvider"
       ]
+    },
+    "laravel": {
+      "dont-discover": [
+        "jgrossi/corcel"
+      ]
     }
   }
 }

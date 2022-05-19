@@ -81,6 +81,18 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
     }
 
     /**
+     * Register the command.
+     *
+     * @return void
+     */
+    protected function registerSeederMakeCommand()
+    {
+        $this->app->singleton('command.seeder.make', function ($app) {
+            return new SeederMakeCommand($app['files'], $app['composer']);
+        });
+    }
+
+    /**
      * Get the services provided by the provider.
      *
      * @return array
